@@ -1,0 +1,221 @@
+.navbar
+   position: absolute
+   display: grid
+   grid-template-columns: auto minmax(320px, 1400px) auto
+   grid-gap: 20px
+   left: 0
+   top: 0
+   width: 100%
+   height: 60px
+   background-color: rgba(255, 255, 255, .9)
+   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15)
+   .nav-container
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-gap: 20px
+      grid-column: 2 / 3
+      align-items: center
+      .nav-logo
+         width: 143px
+      .nav-mail
+         display: inline-block
+         justify-self: center
+      .nav-lang
+         justify-self: end
+         a
+            margin-left: 10px
+
+
+.main-screen
+   background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../img/pechat-etiketok-bg.jpg) no-repeat
+   background-size: cover
+   .owl-carousel
+      grid-column: 1 / 4
+      grid-row: 1 / 4
+      .item
+         width: 100%
+         height: 100vh
+         span
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            color: white
+            font-size: 120px
+
+.screen-1
+   display: grid
+   grid-template-columns: auto minmax(320px, 1400px) auto
+   grid-gap: 20px
+   .grid-col-container
+      display: grid
+      grid-column: 2 / 3
+      grid-template-columns: 1fr 1fr
+      grid-gap: 20px
+      align-items: center
+      .main-zag-block
+         max-width: 400px
+         grid-column: 1 / 2
+         margin: 0 auto
+
+      #myform-1
+         display: grid
+         max-width: 500px
+         grid-row-gap: 20px
+         grid-column: 2 / 3
+         border-radius: 6px
+         height: fit-content
+         background-color: #fff
+         padding: 20px
+         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08)
+         margin: 0 auto
+         p
+            font-size: 12px
+            margin: 0
+         div:last-child
+            align-items: start
+         .f-row-3col, .f-row-2col
+            display: grid
+            grid-gap: 20px
+            align-items: end
+            label, input, select, button
+               width: 100%
+            select, input
+               border-radius: 4px
+               border: 1px solid #ccc
+               font-size: 14px
+            input, select, button
+               height: 40px
+            label
+               font-size: 12px
+               padding-left: 6px
+               display: inline-block
+               margin-bottom: 6px
+            input
+               padding-left: 42px
+               background-color: rgba(0, 0, 0, .01)
+               &::placeholder
+                  color: #999
+                  font-size: 14px
+            select
+               padding-left: 12px
+            .icon-container
+               position: absolute
+               transform: translate(0px, -40px)
+               width: 34px
+               height: 40px
+               background-color: rgba(204, 204, 204, .3)
+               border-radius: 4px 0 0 4px
+               i
+                  position: absolute
+                  top: 50%
+                  left: 50%
+                  transform: translate(-50%, -50%)
+                  color: #999
+         button
+            margin-top: 16px
+         .f-row-3col
+            grid-template-columns: 1fr 1fr 1fr
+            align-items: end
+         .f-row-2col
+            grid-template-columns: 1fr 1fr
+            &:last-child
+               margin-top: 20px
+
+
+
+.owl-carousel
+   .owl-nav
+      button
+         &.owl-next, &.owl-prev
+            position: absolute
+            top: 50%
+            width: 120px
+            height: 120px
+            border-radius: 50%
+            background-color: rgba(255, 255, 255, .8)
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08)
+            transition: .2s
+            span
+               display: block
+               font-size: 60px
+               color: rgba(0, 0, 0, .3)
+               transition: .2s
+            &:hover
+               background-color: rgba(255, 255, 255, 1)
+               span
+                  color: rgba(0, 0, 0, .9)
+
+         &.owl-prev
+            left: 0
+            transform: translate(calc(-50% - 15px), -50%)
+            &:hover
+               transform: translate(calc(-50% - 10px), -50%)
+            span
+               display: block
+               transform: translateX(25px)
+         &.owl-next
+            right: 0
+            transform: translate(calc(50% + 15px), -50%)
+            &:hover
+               transform: translate(calc(50% + 10px), -50%)
+            span
+               display: block
+               transform: translateX(-25px)
+
+.owl-theme
+   .owl-dots
+      position: absolute
+      width: 100%
+      left: 50%
+      transform: translateX(-50%)
+      bottom: 6px
+      .owl-dot
+         position: relative
+         width: 140px
+         height: 40px
+         margin: 0 1px
+         span
+            position: absolute
+            top: 0
+            left: 0
+            width: inherit
+            height: inherit
+            border-radius: 0
+            margin: 0
+            background-color: #fff
+            transition: .2s
+            &:hover::after
+               color: $accent
+            &::after
+               position: absolute
+               color: #999
+               top: 50%
+               left: 50%
+               transform: translate(-50%, -50%)
+            &:hover
+               background-color: #fff
+
+
+         &.active
+               span
+                  margin: 0
+                  background-color: $accent
+                  transform: scale(1.05)
+                  z-index: 1000
+                  &::after
+                     color: #fff
+      .owl-dot:nth-child(1)
+         span
+            border-radius: 20px 0 0 20px
+            &::after
+               content: 'Этикетки'
+      .owl-dot:nth-child(2)
+         span
+            &::after
+               content: 'Ролики'
+      .owl-dot:nth-child(3)
+         span
+            border-radius: 0 20px 20px 0
+            &::after
+               content: 'Риббоны'

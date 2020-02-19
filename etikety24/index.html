@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]> <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="ru">
+<!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<div class="main-container">
+		<nav class="navbar">
+			<div class="nav-container">
+				<div class="nav-logo">
+					<a href="#"><img src="img/E24.svg" alt=""></a>
+				</div>
+				<a href="#" class="nav-mail">company@mail.cz</a>
+				<div class="nav-lang">
+					<a href="#" class="nav-active">Ru</a>
+					<a href="#">Cz</a>
+				</div>
+			</div>
+		</nav>
+
+		<div class="main-screen">
+
+			<div class="owl-carousel owl-theme">
+
+				<div class="item screen-1">
+
+					<div class="grid-col-container">
+						<div class="main-zag-block">
+							<h1>Печать этикеток за 24 часа</h1>
+							<div class="pozag-txt">после подтвеждения заказа</div>
+						</div>
+						<form id="myform-1">
+							<input type="hidden" name="project_name" value="Site Name">
+							<input type="hidden" name="admin_email" value="admin@mail.com">
+							<input type="hidden" name="form_subject" value="первая форма">
+							<!-- END Hidden Required Fields -->
+
+							<div class="f-row-3col">
+								<div>
+									<label for="f-width">Ширина этикетки&nbsp;(мм)</label>
+									<input type="number" name="width" placeholder="Ширина" required id="f-width">
+									<div class="icon-container">
+										<i class="mdi mdi-arrow-left-right"></i>
+									</div>
+								</div>
+								<div>
+									<label for="f-height">Высота этикетки&nbsp;(мм)</label>
+									<input type="number" name="height" placeholder="Высота" required id="f-height">
+									<div class="icon-container">
+										<i class="mdi mdi-arrow-up-down"></i>
+									</div>
+								</div>
+								<div>
+									<label for="f-kol">Количество этикеток</label>
+									<input type="number" name="height" placeholder="Количество" required id="f-kol">
+									<div class="icon-container">
+										<i class="mdi mdi-animation-outline"></i>
+									</div>
+								</div>
+							</div>
+							<div class="f-row-2col">
+								<div>
+									<label for="f-mat">Материал этикеток</label>
+									<select id="f-mat">
+										<option>Материал-1</option>
+										<option>Материал-2</option>
+										<option>Материал-3</option>
+										<option>Материал-4</option>
+									</select>
+								</div>
+								<div>
+									<label for="f-color">Цветность</label>
+									<select id="f-color">
+										<option>Цветность-1</option>
+										<option>Цветность-2</option>
+										<option>Цветность-3</option>
+										<option>Цветность-4</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="f-row-2col">
+								<div>
+									<label for="f-email">Ваш Email</label>
+									<input type="email" name="E-mail" placeholder="E-mail" required id="f-email">
+									<div class="icon-container">
+										<i class="mdi mdi-email-outline"></i>
+									</div>
+								</div>
+								<div>
+									<label for="f-tel">Ваш телефон</label>
+									<input type="tel" name="Телефон" placeholder="Телефон" id="f-tel">
+									<div class="icon-container">
+										<i class="mdi mdi-phone"></i>
+									</div>
+								</div>
+							</div>
+							<button>Отправить заказ</button>
+
+							<div class="diskl">
+								<p>Если в наличии нет вашего размера или материала этикетки, то мы вам предложим альтернативу. Подготовка файла к печать для тиражей более 1000шт одного вида - БЕСПЛАТНО!</p>
+							</div>
+						</form>
+					</div>
+
+				</div>
+				<div class="item screen-2"><span class="mdi mdi-animation"></span></div>
+				<div class="item screen-3"><span class="mdi mdi-balloon"></span></div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- ============================================================== -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

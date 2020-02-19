@@ -1,0 +1,565 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800|Source+Sans+Pro:400,700&display=swap");
+@import url(../libs/bootstrap-grid/bootstrap-grid.css);
+@import url(../libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css);
+@import url(../libs/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css);
+@import "//cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css";
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*::-webkit-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*:-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*::-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*:-ms-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: #666;
+}
+
+body input:required:valid,
+body textarea:required:valid {
+  color: #666;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.65;
+  font-family: "Source Sans Pro", sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 125%;
+}
+
+.podzag-txt {
+  font-size: 18px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+::-moz-selection {
+  background-color: #ED1C24;
+  color: #fff;
+}
+
+::selection {
+  background-color: #ED1C24;
+  color: #fff;
+}
+
+form button {
+  height: 48px;
+  background-color: #ED1C24;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  border: none;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+form button:hover {
+  -webkit-transform: translateY(-1px);
+      -ms-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-filter: brightness(96%);
+          filter: brightness(96%);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+select {
+  /* Убираем стандартное поведение для браузеров (без него селекты будут системные) */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  /* Иконка стрелки вниз для селекта  */
+  background: url(../img/icons/menu-down.svg) no-repeat;
+  background-position: right 8px center;
+}
+
+button {
+  outline: none !important;
+}
+
+input[type="button"]::-moz-focus-inner {
+  border: 0;
+}
+
+.navbar {
+  position: absolute;
+  display: grid;
+  grid-template-columns: auto minmax(320px, 1400px) auto;
+  grid-gap: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+
+.navbar .nav-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  grid-column: 2 / 3;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .nav-container .nav-logo {
+  width: 143px;
+}
+
+.navbar .nav-container .nav-mail {
+  display: inline-block;
+  justify-self: center;
+}
+
+.navbar .nav-container .nav-lang {
+  justify-self: end;
+}
+
+.navbar .nav-container .nav-lang a {
+  margin-left: 10px;
+}
+
+.main-screen {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url(../img/pechat-etiketok-bg.jpg) no-repeat;
+  background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../img/pechat-etiketok-bg.jpg) no-repeat;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../img/pechat-etiketok-bg.jpg) no-repeat;
+  background-size: cover;
+}
+
+.main-screen .owl-carousel {
+  grid-column: 1 / 4;
+  grid-row: 1 / 4;
+}
+
+.main-screen .owl-carousel .item {
+  width: 100%;
+  height: 100vh;
+}
+
+.main-screen .owl-carousel .item span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  font-size: 120px;
+}
+
+.screen-1 {
+  display: grid;
+  grid-template-columns: auto minmax(320px, 1400px) auto;
+  grid-gap: 20px;
+}
+
+.screen-1 .grid-col-container {
+  display: grid;
+  grid-column: 2 / 3;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.screen-1 .grid-col-container .main-zag-block {
+  max-width: 400px;
+  grid-column: 1 / 2;
+  margin: 0 auto;
+}
+
+.screen-1 .grid-col-container #myform-1 {
+  display: grid;
+  max-width: 500px;
+  grid-row-gap: 20px;
+  grid-column: 2 / 3;
+  border-radius: 6px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #fff;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+  margin: 0 auto;
+}
+
+.screen-1 .grid-col-container #myform-1 p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.screen-1 .grid-col-container #myform-1 div:last-child {
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.screen-1 .grid-col-container #myform-1 .f-row-3col, .screen-1 .grid-col-container #myform-1 .f-row-2col {
+  display: grid;
+  grid-gap: 20px;
+  -webkit-box-align: end;
+  -webkit-align-items: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.screen-1 .grid-col-container #myform-1 .f-row-3col label, .screen-1 .grid-col-container #myform-1 .f-row-3col input, .screen-1 .grid-col-container #myform-1 .f-row-3col select, .screen-1 .grid-col-container #myform-1 .f-row-3col button, .screen-1 .grid-col-container #myform-1 .f-row-2col label, .screen-1 .grid-col-container #myform-1 .f-row-2col input, .screen-1 .grid-col-container #myform-1 .f-row-2col select, .screen-1 .grid-col-container #myform-1 .f-row-2col button {
+  width: 100%;
+}
+
+.screen-1 .grid-col-container #myform-1 .f-row-3col select, .screen-1 .grid-col-container #myform-1 .f-row-3col input, .screen-1 .grid-col-container #myform-1 .f-row-2col select, .screen-1 .grid-col-container #myform-1 .f-row-2col input {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.screen-1 .grid-col-container #myform-1 .f-row-3col input, .screen-1 .grid-col-container #myform-1 .f-row-3col select, .screen-1 .grid-col-container #myform-1 .f-row-3col button, .screen-1 .grid-col-container #myform-1 .f-row-2col input, .screen-1 .grid-col-container #myform-1 .f-row-2col select, .screen-1 .grid-col-container #myform-1 .f-row-2col button {
+  height: 40px;
+}
+
+.screen-1 .grid-col-container #myform-1 .f-row-3col label, .screen-1 .grid-col-container #myform-1 .f-row-2col label {
+  font-size: 12px;
+  padding-left: 6px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.screen-1 .grid-col-container #myform-1 .f-row-3col input, .screen-1 .grid-col-container #myform-1 .f-row-2col input {
+  padding-left: 42px;
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+.screen-1 .grid-col-container #myform-1 .f-row-3col input::-webkit-input-placeholder, .screen-1 .grid-col-container #myform-1 .f-row-2col input::-webkit-input-placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.screen-1 .grid-col-container #myform-1 .f-row-3col input::-moz-placeholder, .screen-1 .grid-col-container #myform-1 .f-row-2col input::-moz-placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.screen-1 .grid-col-container #myform-1 .f-row-3col input:-ms-input-placeholder, .screen-1 .grid-col-container #myform-1 .f-row-2col input:-ms-input-placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.screen-1 .grid-col-container #myform-1 .f-row-3col input::-ms-input-placeholder, .screen-1 .grid-col-container #myform-1 .f-row-2col input::-ms-input-placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.screen-1 .grid-col-container #myform-1 .f-row-3col input::placeholder, .screen-1 .grid-col-container #myform-1 .f-row-2col input::placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.screen-1 .grid-col-container #myform-1 .f-row-3col select, .screen-1 .grid-col-container #myform-1 .f-row-2col select {
+  padding-left: 12px;
+}
+
+.screen-1 .grid-col-container #myform-1 .f-row-3col .icon-container, .screen-1 .grid-col-container #myform-1 .f-row-2col .icon-container {
+  position: absolute;
+  -webkit-transform: translate(0px, -40px);
+      -ms-transform: translate(0px, -40px);
+          transform: translate(0px, -40px);
+  width: 34px;
+  height: 40px;
+  background-color: rgba(204, 204, 204, 0.3);
+  border-radius: 4px 0 0 4px;
+}
+
+.screen-1 .grid-col-container #myform-1 .f-row-3col .icon-container i, .screen-1 .grid-col-container #myform-1 .f-row-2col .icon-container i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #999;
+}
+
+.screen-1 .grid-col-container #myform-1 button {
+  margin-top: 16px;
+}
+
+.screen-1 .grid-col-container #myform-1 .f-row-3col {
+  grid-template-columns: 1fr 1fr 1fr;
+  -webkit-box-align: end;
+  -webkit-align-items: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.screen-1 .grid-col-container #myform-1 .f-row-2col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.screen-1 .grid-col-container #myform-1 .f-row-2col:last-child {
+  margin-top: 20px;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+  position: absolute;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
+.owl-carousel .owl-nav button.owl-next span, .owl-carousel .owl-nav button.owl-prev span {
+  display: block;
+  font-size: 60px;
+  color: rgba(0, 0, 0, 0.3);
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
+.owl-carousel .owl-nav button.owl-next:hover, .owl-carousel .owl-nav button.owl-prev:hover {
+  background-color: white;
+}
+
+.owl-carousel .owl-nav button.owl-next:hover span, .owl-carousel .owl-nav button.owl-prev:hover span {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  left: 0;
+  -webkit-transform: translate(calc(-50% - 15px), -50%);
+      -ms-transform: translate(calc(-50% - 15px), -50%);
+          transform: translate(calc(-50% - 15px), -50%);
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover {
+  -webkit-transform: translate(calc(-50% - 10px), -50%);
+      -ms-transform: translate(calc(-50% - 10px), -50%);
+          transform: translate(calc(-50% - 10px), -50%);
+}
+
+.owl-carousel .owl-nav button.owl-prev span {
+  display: block;
+  -webkit-transform: translateX(25px);
+      -ms-transform: translateX(25px);
+          transform: translateX(25px);
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  right: 0;
+  -webkit-transform: translate(calc(50% + 15px), -50%);
+      -ms-transform: translate(calc(50% + 15px), -50%);
+          transform: translate(calc(50% + 15px), -50%);
+}
+
+.owl-carousel .owl-nav button.owl-next:hover {
+  -webkit-transform: translate(calc(50% + 10px), -50%);
+      -ms-transform: translate(calc(50% + 10px), -50%);
+          transform: translate(calc(50% + 10px), -50%);
+}
+
+.owl-carousel .owl-nav button.owl-next span {
+  display: block;
+  -webkit-transform: translateX(-25px);
+      -ms-transform: translateX(-25px);
+          transform: translateX(-25px);
+}
+
+.owl-theme .owl-dots {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 6px;
+}
+
+.owl-theme .owl-dots .owl-dot {
+  position: relative;
+  width: 140px;
+  height: 40px;
+  margin: 0 1px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 0;
+  margin: 0;
+  background-color: #fff;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
+.owl-theme .owl-dots .owl-dot span:hover::after {
+  color: #ED1C24;
+}
+
+.owl-theme .owl-dots .owl-dot span::after {
+  position: absolute;
+  color: #999;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.owl-theme .owl-dots .owl-dot span:hover {
+  background-color: #fff;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  margin: 0;
+  background-color: #ED1C24;
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+  z-index: 1000;
+}
+
+.owl-theme .owl-dots .owl-dot.active span::after {
+  color: #fff;
+}
+
+.owl-theme .owl-dots .owl-dot:nth-child(1) span {
+  border-radius: 20px 0 0 20px;
+}
+
+.owl-theme .owl-dots .owl-dot:nth-child(1) span::after {
+  content: 'Этикетки';
+}
+
+.owl-theme .owl-dots .owl-dot:nth-child(2) span::after {
+  content: 'Ролики';
+}
+
+.owl-theme .owl-dots .owl-dot:nth-child(3) span {
+  border-radius: 0 20px 20px 0;
+}
+
+.owl-theme .owl-dots .owl-dot:nth-child(3) span::after {
+  content: 'Риббоны';
+}
+
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  /**/
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  /**/
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  /**/
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /**/
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  /**/
+}
+
+/*==========  Mobile First  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  /**/
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  /**/
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  /**/
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  /**/
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  /**/
+}
